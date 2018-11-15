@@ -1,23 +1,21 @@
 name:                deploybot-hs
 version:             0.1.0.0
-github:              "githubuser/deploybot-hs"
+github:              "Azwraith42/deploybot-hs"
 license:             BSD3
-author:              "Author name here"
-maintainer:          "example@example.com"
-copyright:           "2018 Author name here"
+author:              "Alec Reeves"
+maintainer:          "alchreeves@gmail.com"
+copyright:           "2018 Alec Reeves"
 
 extra-source-files:
 - README.md
-- ChangeLog.md
 
-# Metadata used when publishing your package
-# synopsis:            Short description of your package
+synopsis: a haskell integration for a slackbot
 # category:            Web
 
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/githubuser/deploybot-hs#readme>
+description:         Please see the README on GitHub at <https://github.com/Azwraith42/deploybot-hs#readme>
 
 dependencies:
 - base >= 4.7 && < 5
@@ -42,7 +40,15 @@ tests:
     source-dirs:         test
     ghc-options:
     - -threaded
+    - -fprint-potential-instances
     - -rtsopts
     - -with-rtsopts=-N
+    - -Wall
     dependencies:
     - deploybot-hs
+    - QuickCheck
+    - quickcheck-assertions
+    - quickcheck-instances
+    - tasty
+    - tasty-hunit
+    - tasty-quickcheck
