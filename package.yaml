@@ -19,6 +19,10 @@ description:         Please see the README on GitHub at <https://github.com/Azwr
 
 dependencies:
 - base >= 4.7 && < 5
+- text
+- text-conversions
+- text-show
+- transformers
 
 library:
   source-dirs: src
@@ -52,3 +56,7 @@ tests:
     - tasty
     - tasty-hunit
     - tasty-quickcheck
+
+default-extensions:
+  - FlexibleInstances
+  - OverloadedStrings
