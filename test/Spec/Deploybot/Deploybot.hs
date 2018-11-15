@@ -14,7 +14,7 @@ infixl 1 ===
 
 tests :: TestTree
 tests = testGroup "Deploybot" [
-  testCase "sends message to slack" $ do
+  testCase "sends message" $ do
     let
       messageToSend = "Hey there!"
 
@@ -36,9 +36,7 @@ extractMessage = snd . runWriter
 -- below this line prod
 
 runBot :: (Monad m, Slack m) => m ()
-runBot = do
-  sendMessage "Hey there!"
-  pure ()
+runBot = sendMessage "Hey there!"
 
 class Slack m where
   sendMessage :: Text -> m ()
