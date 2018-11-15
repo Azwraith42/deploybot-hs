@@ -17,4 +17,11 @@ tests = testGroup "Deploybot" [
     actual === expected
  ]
 
+type TestWiring
+
+-- above this line test
 ----------------------------------------------------------
+-- below this line prod
+
+runBot :: m ()
+runBot = undefined
